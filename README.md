@@ -1,2 +1,2 @@
 # mothsmoke-rpn1
-calculator
+simple rpn calculator with e-ink display
