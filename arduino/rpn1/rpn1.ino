@@ -76,7 +76,7 @@ void setup() {
   
   inputText[0] = '\0';
 
-  // load mode
+  // load trig mode
   modeIndicator.deg = EEPROM.read(EEPROM_MODE_ADDR);
 
   menuBar.blankMenu[0].bitmapOffset = -1;

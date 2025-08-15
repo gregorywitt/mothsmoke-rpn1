@@ -34,16 +34,16 @@ void processKeypress(byte keyCode){
   
   // SOME NUMBER
   if(editing == false){
-    if(!editing){
-      stack[3] = stack[2];
-      stack[2] = stack[1];
-      stack[1] = stack[0];
-    }
+    stack[3] = stack[2];
+    stack[2] = stack[1];
+    stack[1] = stack[0];
+
     stack[0] = fp64_sd(0.0);
     inputText[0] = '\0';
     cursorPos = 0;
     updateY = true;
   }
+
   editing = true;
   //Serial.println("number entered");
   if (cursorPos == maxStringLength) return;
