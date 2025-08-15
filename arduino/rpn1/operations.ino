@@ -1,19 +1,12 @@
 #include "globals.h"
 
 void do_enter(){
-  if(editing){
-    stack[0] = fp64_atof(inputText);
-    //Serial.println(fp64_to_string(stack[0], 16, 10));
-    stack[3] = stack[2];
-    stack[2] = stack[1];
-    stack[1] = stack[0];
-  }
-  else{
-    stack[3] = stack[2];
-    stack[2] = stack[1];
-    stack[1] = stack[0];
-  }
-  editing = true; // now editing new entry
+  if (editing) stack[0] = fp64_atof(inputText);
+
+  stack[3] = stack[2];
+  stack[2] = stack[1];
+  stack[1] = stack[0];
+
   cursorPos = 0;
 }
 
