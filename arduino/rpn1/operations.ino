@@ -99,6 +99,11 @@ void do_negative(){
 }
 
 void do_pi(){
+  if (!editing){
+    stack[3] = stack[2];
+    stack[2] = stack[1];
+    stack[1] = stack[0];
+  }
   stack[0] = fp64_atof("3.141592653589793"); //float64_NUMBER_PI;
   editing = false;
 }

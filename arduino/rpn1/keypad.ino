@@ -29,7 +29,7 @@ void processKeypress(byte keyCode){
   if (keyCode == 22){ do_square_root(); return; }  
   if (keyCode == 21){ do_square(); return; }
   if (keyCode == 1) { do_negative(); return; }     // +/- KEY
-  if (keyCode == 24){ do_pi(); return; }
+  if (keyCode == 24){ do_pi(); updateY = true; return; }
   if (keyCode == 20){ do_delete(); return; }
   
   // SOME NUMBER
